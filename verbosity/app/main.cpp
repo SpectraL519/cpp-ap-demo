@@ -22,7 +22,7 @@ void print_welcome_message(const verbosity_level verbosity) {
     }
 }
 
-}
+} // namespace
 
 int main(int argc, char** argv) {
     ap::argument_parser parser;

@@ -30,11 +30,11 @@ This will build the executable `verbosity` in the `<verbosity-root>/build` direc
 
 Check what happens when you run the `verbosity` executable with:
 * no arguments
-* only the verbosity flag and no values
-* the verbosity flag with a value from 0 to 2
-* the verbosity flag with a value greater than 2 (e.g. `-v 5`)
-* the verbosity flag with more than one value from 0 to 2 (e.g. `-v 0 1 2`)
-* the verbosity flag used more than once with values (e.g. `-v 0 -v 1`)
+* only the *verbosity flag* and no values
+* the *verbosity flag* with a value from 0 to 2
+* the *verbosity flag* with a value greater than 2 (e.g. `-v 5`)
+* the *verbosity flag* with more than one value from 0 to 2 (e.g. `-v 0 1 2`)
+* the *verbosity flag* used more than once with values (e.g. `-v 0 -v 1`)
 
 > [!NOTE]
-> The verbosity flag is either `-v` or `--verbosity`
+> The *verbosity flag* is either `-v` or `--verbosity`

@@ -9,4 +9,5 @@ A collection of the [CPP-AP](https://github.com/SpectraL519/cpp-ap) library demo
 
 #### Projects:
 
-1. [Verbosity](verbosity/)
+1. [Numbers converter](numbers_converter/)
+2. [Verbosity](verbosity/)
