@@ -12,7 +12,7 @@ The program takes two arguments:
 
 #### The project defines:
 
-* The [power file](power.cpp) - the entry point of the program. Here you include the `ap/argument_parser.hpp` header file and define the parser's configuration, as well as the program's logic.
+* The [power source file](power.cpp) - the entry point of the program. Here you include the `ap/argument_parser.hpp` header file and define the parser's configuration, as well as the program's logic.
 
 <br />
 
