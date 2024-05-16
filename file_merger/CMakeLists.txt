@@ -10,7 +10,7 @@ include(FetchContent)
 FetchContent_Declare(
     cpp-ap
     GIT_REPOSITORY https://github.com/SpectraL519/cpp-ap.git
-    GIT_TAG cppap-rel-1.1
+    GIT_TAG master
 )
 FetchContent_MakeAvailable(cpp-ap)
 
