@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     ap::argument_parser parser;
     parser.program_name("verbosity level")
         .program_description("shows the correct way of using enums as a parser argument type")
-        .default_optional_arguments({ ap::default_argument::optional::help });
+        .default_optional_arguments({ ap::default_optarg::help });
 
     parser.add_optional_argument<verbosity_level>("verbosity_level", "v")
         .default_value(verbosity_level::low)

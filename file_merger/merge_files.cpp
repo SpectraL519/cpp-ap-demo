@@ -10,9 +10,9 @@ int main(int argc, char* argv[]) {
         .program_name("merge files")
         .program_description("shows the correct way of using default arguments")
         .default_optional_arguments({
-            ap::default_argument::optional::help,
-            ap::default_argument::optional::multi_input,
-            ap::default_argument::optional::output
+            ap::default_optarg::help,
+            ap::default_optarg::multi_input,
+            ap::default_optarg::output
         });
 
     try {

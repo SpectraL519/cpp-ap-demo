@@ -6,7 +6,7 @@ int main(int argc, char* argv[]) {
     ap::argument_parser parser;
     parser.program_name("convert numbers")
         .program_description("shows the correct way of using dthe choices parameter")
-        .default_optional_arguments({ ap::default_argument::optional::help });
+        .default_optional_arguments({ ap::default_optarg::help });
 
     parser.add_optional_argument<std::size_t>("numbers", "n")
           .nargs(ap::nargs::any())

@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
     ap::argument_parser parser;
     parser.program_name("power calculator")
           .program_description("calculates the value of an expression: base & exponent")
-          .default_optional_arguments({ ap::default_argument::optional::help });
+          .default_optional_arguments({ ap::default_optarg::help });
 
     // add arguments
     parser.add_positional_argument<double>("base")

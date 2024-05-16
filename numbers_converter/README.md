@@ -48,7 +48,8 @@ Check what happens when you run the `convert_numbers` executable with:
 #### Example program execution
 
 ```shell
-> ./convert_numbers --numbers 11 13 --base hex
-11 = (b)_16
-13 = (d)_16
+> ./convert_numbers --numbers 10 20 44 --base hex
+10 = (a)_16
+20 = (14)_16
+44 = (2c)_16
 ```
