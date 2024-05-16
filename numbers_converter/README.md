@@ -2,6 +2,12 @@
 
 This demo project demonstrates how you can use the `choises` parameter of an argument.
 
+The program takes two optional arguments:
+* `numbers` - a list of unsigned integer values (empty list by default).
+* `base` - the number system's base to which the given numbers will be converted. This argument can have exactly one value, which can be one of: `bin`, `dec`, `hex`, where `dec` is the default value.
+
+The program prints all the parsed numbers converted to the selected system.
+
 <br />
 
 #### The project defines:
@@ -36,3 +42,13 @@ Check what happens when you run the `convert_numbers` executable with:
 > [!NOTE]
 > * The *base flag* is either `-b` or `--base`
 > * The *numbers flag* is either `-n` or `--numbers`
+
+<br />
+
+#### Example program execution
+
+```shell
+> ./convert_numbers --numbers 11 13 --base hex
+11 = (b)_16
+13 = (d)_16
+```

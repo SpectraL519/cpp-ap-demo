@@ -8,12 +8,14 @@ int main(int argc, char* argv[]) {
         .program_description("shows the correct way of using dthe choices parameter")
         .default_optional_arguments({ ap::default_argument::optional::help });
 
-    parser.add_optional_argument<std::size_t>("numbers", "n").nargs(ap::nargs::any()).help("positive integer value");
+    parser.add_optional_argument<std::size_t>("numbers", "n")
+          .nargs(ap::nargs::any())
+          .help("positive integer value");
     parser.add_optional_argument("base", "b")
-        .nargs(1)
-        .default_value("dec")
-        .choices({ "bin", "dec", "hex" })
-        .help("output number format base");
+          .nargs(1)
+          .default_value("dec")
+          .choices({ "bin", "dec", "hex" })
+          .help("output number format base");
 
     try {
         parser.parse_args(argc, argv);
@@ -28,7 +30,7 @@ int main(int argc, char* argv[]) {
         std::exit(EXIT_SUCCESS);
     }
 
-    const auto numbers = parser.values<std::size_t>("number");
+    const auto numbers = parser.values<std::size_t>("numbers");
     const auto base = parser.value("base");
 
     convert_numbers(numbers, base);
