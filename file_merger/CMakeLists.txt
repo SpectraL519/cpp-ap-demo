@@ -5,23 +5,10 @@ project(cpp-ap-demo-file-merger
     LANGUAGES CXX
 )
 
-# Fetch CPP-AP library
-include(FetchContent)
-FetchContent_Declare(
-    cpp-ap
-    GIT_REPOSITORY https://github.com/SpectraL519/cpp-ap.git
-    GIT_TAG master
-)
-FetchContent_MakeAvailable(cpp-ap)
-
 # Define the executable for the project
-add_executable(merge_files merge_files.cpp)
-
-target_include_directories(merge_files PRIVATE include)
-set_target_properties(merge_files PROPERTIES
-    CXX_STANDARD 20
-    CXX_STANDARD_REQUIRED YES
-)
+add_executable(file_merger_run merge_files.cpp)
+target_include_directories(file_merger_run PRIVATE include)
+set_target_properties(file_merger_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(merge_files PRIVATE cpp-ap)
+target_link_libraries(file_merger_run PRIVATE cpp-ap)

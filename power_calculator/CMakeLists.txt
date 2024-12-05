@@ -5,23 +5,10 @@ project(cpp-ap-demo-power-calculator
     LANGUAGES CXX
 )
 
-# Fetch CPP-AP library
-include(FetchContent)
-FetchContent_Declare(
-    cpp-ap
-    GIT_REPOSITORY https://github.com/SpectraL519/cpp-ap.git
-    GIT_TAG master
-)
-FetchContent_MakeAvailable(cpp-ap)
-
 # Define the executable for the project
-add_executable(power power.cpp)
-
-target_include_directories(power PRIVATE include)
-set_target_properties(power PROPERTIES
-    CXX_STANDARD 20
-    CXX_STANDARD_REQUIRED YES
-)
+add_executable(power_calculator_run power.cpp)
+target_include_directories(power_calculator_run PRIVATE include)
+set_target_properties(power_calculator_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(power PRIVATE cpp-ap)
+target_link_libraries(power_calculator_run PRIVATE cpp-ap)

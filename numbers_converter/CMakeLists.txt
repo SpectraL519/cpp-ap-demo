@@ -5,26 +5,13 @@ project(cpp-ap-demo-numbers-converter
     LANGUAGES CXX
 )
 
-# Fetch CPP-AP library
-include(FetchContent)
-FetchContent_Declare(
-    cpp-ap
-    GIT_REPOSITORY https://github.com/SpectraL519/cpp-ap.git
-    GIT_TAG master
-)
-FetchContent_MakeAvailable(cpp-ap)
-
 # Define the executable for the project
-add_executable(convert_numbers
+add_executable(numbers_converter_run
     app/main.cpp
     source/numbers_converter.cpp
 )
-
-target_include_directories(convert_numbers PRIVATE include)
-set_target_properties(convert_numbers PROPERTIES
-    CXX_STANDARD 20
-    CXX_STANDARD_REQUIRED YES
-)
+target_include_directories(numbers_converter_run PRIVATE include)
+set_target_properties(numbers_converter_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(convert_numbers PRIVATE cpp-ap)
+target_link_libraries(numbers_converter_run PRIVATE cpp-ap)
