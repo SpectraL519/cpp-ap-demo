@@ -7,7 +7,7 @@ project(cpp-ap-demo
 
 # Build options
 set(OUT_DIR ${CMAKE_CURRENT_BINARY_DIR})
-set(AP_TAG "master" CACHE STRING "The branch or tag name used to fetch the CPP-AP library")
+set(AP_TAG "cpp-ap-v2" CACHE STRING "The branch or tag name used to fetch the CPP-AP library")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
