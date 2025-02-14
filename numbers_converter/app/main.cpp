@@ -17,14 +17,7 @@ int main(int argc, char* argv[]) {
           .choices({ "bin", "dec", "hex" })
           .help("output number format base");
 
-    try {
-        parser.parse_args(argc, argv);
-    }
-    catch (const ap::argument_parser_exception& err) {
-        std::cerr << "[ERROR] : " << err.what() << std::endl << parser << std::endl;
-        std::exit(EXIT_FAILURE);
-    }
-
+    parser.try_parse_args(argc, argv);
     parser.handle_help_action();
 
     const auto numbers = parser.values<std::size_t>("numbers");

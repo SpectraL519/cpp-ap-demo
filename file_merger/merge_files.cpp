@@ -15,14 +15,7 @@ int main(int argc, char* argv[]) {
             ap::argument::default_optional::output
         });
 
-    try {
-        parser.parse_args(argc, argv);
-    }
-    catch (const ap::argument_parser_exception& err) {
-        std::cerr << "[ERROR] : " << err.what() << std::endl << parser << std::endl;
-        std::exit(EXIT_FAILURE);
-    }
-
+    parser.try_parse_args(argc, argv);
     parser.handle_help_action();
 
     const auto input_file_name_list = parser.values("input");
