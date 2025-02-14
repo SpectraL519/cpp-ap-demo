@@ -11,4 +11,4 @@ target_include_directories(file_merger_run PRIVATE include)
 set_target_properties(file_merger_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(file_merger_run PRIVATE cpp-ap)
+target_link_libraries(file_merger_run PRIVATE cpp-ap-2)

@@ -11,4 +11,4 @@ target_include_directories(power_calculator_run PRIVATE include)
 set_target_properties(power_calculator_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(power_calculator_run PRIVATE cpp-ap)
+target_link_libraries(power_calculator_run PRIVATE cpp-ap-2)

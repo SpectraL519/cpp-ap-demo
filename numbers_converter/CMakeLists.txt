@@ -14,4 +14,4 @@ target_include_directories(numbers_converter_run PRIVATE include)
 set_target_properties(numbers_converter_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(numbers_converter_run PRIVATE cpp-ap)
+target_link_libraries(numbers_converter_run PRIVATE cpp-ap-2)
