@@ -35,14 +35,7 @@ int main(int argc, char** argv) {
         .implicit_value(verbosity_level::mid)
         .nargs(1);
 
-    try {
-        parser.parse_args(argc, argv);
-    }
-    catch (const ap::argument_parser_exception& err) {
-        std::cerr << "[ERROR] : " << err.what() << std::endl << parser << std::endl;
-        std::exit(EXIT_FAILURE);
-    }
-
+    parser.try_parse_args(argc, argv);
     parser.handle_help_action();
 
     print_welcome_message(parser.value<verbosity_level>("verbosity_level"));
