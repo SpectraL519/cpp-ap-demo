@@ -43,10 +43,7 @@ int main(int argc, char** argv) {
         std::exit(EXIT_FAILURE);
     }
 
-    if (parser.value<bool>("help")) {
-        std::cout << parser << std::endl;
-        std::exit(EXIT_SUCCESS);
-    }
+    parser.handle_help_action();
 
     print_welcome_message(parser.value<verbosity_level>("verbosity_level"));
 
