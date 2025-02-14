@@ -27,10 +27,7 @@ int main(int argc, char* argv[]) {
     }
 
     // check for the help argument presence
-    if (parser.value<bool>("help")) {
-        std::cout << parser << std::endl;
-        std::exit(EXIT_SUCCESS);
-    }
+    parser.handle_help_action();
 
     const double base = parser.value<double>("base");
     const std::vector<int> exponent_values = parser.values<int>("exponent");

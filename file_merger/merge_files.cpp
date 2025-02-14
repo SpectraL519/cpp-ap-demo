@@ -23,10 +23,7 @@ int main(int argc, char* argv[]) {
         std::exit(EXIT_FAILURE);
     }
 
-    if (parser.value<bool>("help")) {
-        std::cout << parser << std::endl;
-        std::exit(EXIT_SUCCESS);
-    }
+    parser.handle_help_action();
 
     const auto input_file_name_list = parser.values("input");
     const auto output_file_name = parser.value("output");
