@@ -1,0 +1,12 @@
+module(
+    name = "cpp_ap_demo",
+    version = "2.5.0",
+)
+
+git_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
+git_repository(
+    name = "cpp-ap",
+    remote = "https://github.com/SpectraL519/cpp-ap.git",
+    branch = "master",
+)

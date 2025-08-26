@@ -18,7 +18,6 @@ int main(int argc, char* argv[]) {
           .help("output number format base");
 
     parser.try_parse_args(argc, argv);
-    parser.handle_help_action();
 
     const auto numbers = parser.values<std::size_t>("numbers");
     const auto base = parser.value("base");

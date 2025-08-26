@@ -1,0 +1,11 @@
+cc_binary(
+    name = "verbosity",
+    srcs = [
+        "app/main.cpp",
+        "include/verbosity.hpp",
+        "source/verbosity.cpp",
+    ],
+    includes = ["include"],
+    deps = ["@cpp-ap//:cpp-ap"],
+    visibility = ["//visibility:public"],
+)

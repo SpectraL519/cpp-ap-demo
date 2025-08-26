@@ -1,0 +1,15 @@
+alias(
+    name = "all_demos",
+    actual = ":demos",
+)
+
+filegroup(
+    name = "demos",
+    srcs = [
+        "//numbers_converter:numbers_converter",
+        "//power_calculator:power_calculator",
+        "//verbosity:verbosity",
+        "//file_merger:file_merger",
+    ],
+    visibility = ["//visibility:public"],
+)

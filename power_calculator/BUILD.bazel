@@ -1,0 +1,6 @@
+cc_binary(
+    name = "power_calculator",
+    srcs = ["power.cpp"],
+    deps = ["@cpp-ap//:cpp-ap"],
+    visibility = ["//visibility:public"],
+)

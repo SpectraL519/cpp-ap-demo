@@ -16,7 +16,6 @@ int main(int argc, char* argv[]) {
         });
 
     parser.try_parse_args(argc, argv);
-    parser.handle_help_action();
 
     const auto input_file_name_list = parser.values("input");
     const auto output_file_name = parser.value("output");

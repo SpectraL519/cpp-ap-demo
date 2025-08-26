@@ -1,0 +1,11 @@
+cc_binary(
+    name = "numbers_converter",
+    srcs = [
+        "app/main.cpp",
+        "include/numbers_converter.hpp",
+        "source/numbers_converter.cpp",
+    ],
+    includes = ["include"],
+    deps = ["@cpp-ap//:cpp-ap"],
+    visibility = ["//visibility:public"],
+)

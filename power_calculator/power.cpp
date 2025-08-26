@@ -20,9 +20,6 @@ int main(int argc, char* argv[]) {
     // parse command-line arguments
     parser.try_parse_args(argc, argv);
 
-    // check for the help argument presence
-    parser.handle_help_action();
-
     const double base = parser.value<double>("base");
     const std::vector<int> exponent_values = parser.values<int>("exponent");
 

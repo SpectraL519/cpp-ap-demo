@@ -14,4 +14,4 @@ target_include_directories(verbosity_run PRIVATE include)
 set_target_properties(verbosity_run PROPERTIES OUTPUT_NAME "run")
 
 # Link the cpp-ap library
-target_link_libraries(verbosity_run PRIVATE cpp-ap-2)
+target_link_libraries(verbosity_run PRIVATE cpp-ap)

@@ -36,7 +36,6 @@ int main(int argc, char** argv) {
         .nargs(1);
 
     parser.try_parse_args(argc, argv);
-    parser.handle_help_action();
 
     print_welcome_message(parser.value<verbosity_level>("verbosity_level"));
 
