@@ -1,6 +1,6 @@
 cc_binary(
     name = "file_merger",
-    srcs = ["merge_files.cpp"],
+    srcs = ["main.cpp"],
     deps = ["@cpp-ap//:cpp-ap"],
     visibility = ["//visibility:public"],
 )

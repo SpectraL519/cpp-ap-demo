@@ -1,5 +1,5 @@
 cc_binary(
-    name = "verbosity",
+    name = "message_logger",
     srcs = ["main.cpp"],
     deps = ["@cpp-ap//:cpp-ap"],
     visibility = ["//visibility:public"],

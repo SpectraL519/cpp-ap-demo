@@ -5,10 +5,9 @@
 
 int main(int argc, char* argv[]) {
     // create the parser class instance
-    ap::argument_parser parser;
-    parser.program_name("power calculator")
-          .program_description("calculates the value of an expression: base & exponent")
-          .default_optional_arguments({ ap::argument::default_optional::help });
+    ap::argument_parser parser("power-calculator");
+    parser.program_description("Calculates the value of an expression: base & exponent")
+          .default_arguments(ap::default_argument::o_help);
 
     // add arguments
     parser.add_positional_argument<double>("base")

@@ -31,8 +31,29 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(cpp-ap)
 
+macro(make_demo PROJECT_NAME TARGET_NAME)
+    cmake_minimum_required(VERSION 3.12)
+
+    project(cpp-ap-demo-${PROJECT_NAME}
+        DESCRIPTION "CPP-AP library demo project: ${PROJECT_NAME}"
+        LANGUAGES CXX
+    )
+
+    # Define the executable for the project
+    add_executable(${TARGET_NAME} main.cpp)
+    target_include_directories(${TARGET_NAME} PRIVATE include)
+    set_target_properties(${TARGET_NAME} PROPERTIES OUTPUT_NAME "run")
+
+    # Link the cpp-ap library
+    target_link_libraries(${TARGET_NAME} PRIVATE cpp-ap)
+endmacro()
+
+
 # Build projects
+add_subdirectory(ap_git)
 add_subdirectory(file_merger)
+add_subdirectory(logging_mode)
+add_subdirectory(message_logger)
 add_subdirectory(numbers_converter)
 add_subdirectory(power_calculator)
 add_subdirectory(verbosity)

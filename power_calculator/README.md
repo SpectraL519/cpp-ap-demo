@@ -1,23 +1,21 @@
 # CPP-AP demo: power calculator
 
-<!-- TODO -->
-
 This demo project demonstrates how to add positional and optional arguments to the parser's configuration.
 
-The program takes two arguments:
+<br />
 
-- (positional) `base` - the exponentation base
-- (optional) `exponent` - a list of exponents (specified to take at least one argument)
+### Functionality
+
+- The program calculates the value of an `<base> ^ <exp>` expression for a single base value and multiple exponents.
+
+- The program takes two arguments:
+
+  - (positional) `base` - the exponentation base
+  - (optional) `exponent` - a list of exponents (specified to take at least one argument)
 
 <br />
 
-#### The project defines:
-
-- The [power source file](power.cpp) - the entry point of the program. Here you include the `ap/argument_parser.hpp` header file and define the parser's configuration, as well as the program's logic.
-
-<br />
-
-#### Experiments
+### Experiments
 
 Check what happens when you run the `power` executable with:
 - no arguments
@@ -31,10 +29,10 @@ Check what happens when you run the `power` executable with:
 
 <br />
 
-#### Example program execution
+### Example program execution
 
 ```shell
-> ./power 3 --exponent 1 2 3
+> ./power_calculator/run 3 --exponent 1 2 3
 3 ^ 1 = 3
 3 ^ 2 = 9
 3 ^ 3 = 27

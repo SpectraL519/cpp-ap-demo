@@ -1,24 +1,21 @@
 # CPP-AP demo: numbers converter
 
-This demo project demonstrates how you can use the `choises` parameter of an argument.
-
-The program takes two optional arguments:
-
-- `numbers` - a list of unsigned integer values (empty list by default).
-- `base` - the number system's base to which the given numbers will be converted. This argument can have exactly one value, which can be one of: `bin`, `dec`, `hex`, where `dec` is the default value.
-
-The program prints all the parsed numbers converted to the selected system.
+This demo project demonstrates how you can use an argument's parameters like *nargs*, *choices* or *default values*
 
 <br />
 
-#### The project defines:
+### Functionality
 
-- The [main file](app/main.cpp) - the entry point of the program. Here you include the `ap/argument_parser.hpp` header file and define the parser's configuration.
-- The numbers_converter [header](include/numbers_converter.hpp) and [source](source/numbers_converter.cpp) files - the declarations and definitions of the numbers conversion utility
+- The program prints all the parsed numbers converted to the selected system.
+
+- The program takes two optional arguments:
+
+  - `numbers` - a list of unsigned integer values (empty list by default).
+  - `base` - the number system's base to which the given numbers will be converted. This argument can have exactly one value, which can be one of: `bin`, `dec`, `hex`, where `dec` is the default value.
 
 <br />
 
-#### Experiments
+### Experiments
 
 Check what happens when you run the `convert_numbers` executable with:
 
@@ -34,10 +31,10 @@ Check what happens when you run the `convert_numbers` executable with:
 
 <br />
 
-#### Example program execution
+### Example program execution
 
 ```shell
-> ./convert_numbers --numbers 10 20 44 --base hex
+> ./numbers_converter/run --numbers 10 20 44 --base hex
 10 = (a)_16
 20 = (14)_16
 44 = (2c)_16

@@ -5,15 +5,13 @@
 #include <sstream>
 
 int main(int argc, char* argv[]) {
-    ap::argument_parser parser;
-    parser
-        .program_name("merge files")
-        .program_description("shows the correct way of using default arguments")
-        .default_optional_arguments({
-            ap::argument::default_optional::help,
-            ap::argument::default_optional::multi_input,
-            ap::argument::default_optional::output
-        });
+    ap::argument_parser parser("merge-files");
+    parser.program_description("Merges multiple input text files into a single output file")
+          .default_arguments(
+            ap::default_argument::o_help,
+            ap::default_argument::o_multi_input,
+            ap::default_argument::o_output
+          );
 
     parser.try_parse_args(argc, argv);
 

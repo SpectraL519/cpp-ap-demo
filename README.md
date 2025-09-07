@@ -5,16 +5,23 @@ A collection of the [CPP-AP](https://github.com/SpectraL519/cpp-ap) library demo
 <br />
 
 > [!NOTE]
+>
 > Each demo project has it's own README file with it's detailed explanation
 
 <br />
 
 ## Demo Projects
 
-1. [Power calculator](power_calculator/)
-2. [Numbers converter](numbers_converter/)
-3. [Verbosity](verbosity/)
-4. [File merger](file_merger)
+| Project | Description |
+|---------|-------------|
+| [Power Calculator](/power_calculator/) | Calculates the value of a $b^e$ expression for the given base and exponents.<br/>**Demonstrates:** The basic usage of positional and optional arguments. |
+| [File Merger](/file_merger/) | Merges multiple text files into a single output file.<br/>**Demonstrates:** The usage of default arguments. |
+| [Numbers Converter](/numbers_converter/) | Converts numbers between different bases.<br/>**Demonstrates:** The usage of argument parameters such as *nargs*, *choices*, and *default values*. |
+| [Verbosity](/verbosity/) | Prints messages with varying levels of verbosity.<br/>**Demonstrates:** The usage of `none_type` arguments and compound argument flags. |
+| [Logging Mode](/logging_mode/) | Logs a message depending on the selected logging mode (`quiet`, `normal`, `verbose`).<br/>**Demonstrates:** The usage of custom argument value types (like enums). |
+| [Message Logger](/message_logger/) | Outputs a message to a file, console, or not at all.<br/>**Demonstrates:** The usage of argument groups. |
+| [AP-GIT](/ap_git/) | A minimal Git CLI clone with subcommands (`init`, `add`, `commit`, `status`, `push`).<br/>**Demonstrates:** The usage of subparsers for multi-command CLIs and complex argument configurations. |
+
 
 <br />
 
@@ -30,8 +37,12 @@ cmake --build build/ # -j <njobs>
 This will generate a `run` executable in each of the `build/<demo-project-name>` directories, so to execute the built programs you can run:
 
 ```shell
-./build/<demo-project-name> <command-line args>
+./build/<demo-project-name>/run <command-line args>
 ```
+
+> [!NOTE]
+>
+> Each project is built in the exact same way - using the `make_demo` macro defined in the root [CMakeLists.txt](/CMakeLists.txt) file
 
 <br />
 
