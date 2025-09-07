@@ -6,10 +6,11 @@ alias(
 filegroup(
     name = "demos",
     srcs = [
+        "//file_merger:file_merger",
+        "//logging_mode:logging_mode",
         "//numbers_converter:numbers_converter",
         "//power_calculator:power_calculator",
         "//verbosity:verbosity",
-        "//file_merger:file_merger",
     ],
     visibility = ["//visibility:public"],
 )
