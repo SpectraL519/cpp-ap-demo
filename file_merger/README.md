@@ -35,5 +35,5 @@ Check what happens when you run the `merge_files` executable with:
 #### Example program execution
 
 ```shell
-> ./merge_files -i ../data/test_file_1.txt ../data/test_file_2.txt ../data/test_file_1.txt -o out_file.txt
+> ./merge_files -i data/test_file_1.txt data/test_file_2.txt -o out_file.txt
 ```

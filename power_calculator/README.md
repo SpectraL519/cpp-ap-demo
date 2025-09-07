@@ -1,7 +1,5 @@
 # CPP-AP demo: power calculator
 
-<!-- TODO -->
-
 This demo project demonstrates how to add positional and optional arguments to the parser's configuration.
 
 The program takes two arguments:
